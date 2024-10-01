@@ -4,7 +4,7 @@ ARG TARGETARCH
 
 RUN apk add --update --no-cache ca-certificates curl jq \
     && KUBECTL_LATEST_STABLE_VERSION=$(curl -L https://dl.k8s.io/release/stable.txt) \
-    && curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_LATEST_STABLE_VERSION}/bin/linux/$TARGETARCH/kubectl -o /usr/local/bin/kubectl \
+    && curl -L https://dl.k8s.io/${KUBECTL_LATEST_STABLE_VERSION}/bin/linux/$TARGETARCH/kubectl -o /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl
 
 FROM alpine:3.18
