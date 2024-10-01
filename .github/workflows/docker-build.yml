@@ -7,7 +7,7 @@ on:
 env:
   TARGET: linux/amd64
   BUILD_FLAGS: --no-cache
-  
+
 
 jobs:
   build:
@@ -39,7 +39,7 @@ jobs:
         id: scan
         uses: anchore/scan-action@v3
         with:
-          image: "ganga3/k8s-wait-for:latest"
+          image: "scrumteamwhitewalkers/k8s-wait-for:latest"
           fail-build: true
           severity-cutoff: "high"
           output-format: sarif
