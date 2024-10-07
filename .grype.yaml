@@ -16,5 +16,8 @@ ignore:
   # There is not currently a fix available -- have implemented the suggested
   # workaround.
   - vulnerability: CVE-2023-4807
+  
+  - vulnerability: CVE-2024-34156
+  - vulnerability: CVE-2024-34155
 
 
